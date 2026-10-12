@@ -73,3 +73,4 @@ Route::post('/mahasiswa/store', [QueryBuilderDemoController::class, 'prosesInser
 // Route untuk uji update & delete berdasarkan NIM tertentu
 Route::get('/mahasiswa/update/{nim}', [QueryBuilderDemoController::class, 'prosesUpdate'])->name('mhs.update');
 Route::get('/mahasiswa/delete/{nim}', [QueryBuilderDemoController::class, 'prosesDelete'])->name('mhs.delete');
+Route::get('/uji-query', [MahasiswaController::class, 'ujiEagerLoading']);
