@@ -74,3 +74,13 @@ Route::post('/mahasiswa/store', [QueryBuilderDemoController::class, 'prosesInser
 Route::get('/mahasiswa/update/{nim}', [QueryBuilderDemoController::class, 'prosesUpdate'])->name('mhs.update');
 Route::get('/mahasiswa/delete/{nim}', [QueryBuilderDemoController::class, 'prosesDelete'])->name('mhs.delete');
 Route::get('/uji-query', [MahasiswaController::class, 'ujiEagerLoading']);
+Route::get('/profil', function () {
+    return view('profil')->with([
+        'nama' => 'Ahmad Fauzi',
+        'nim' => '2024010001',
+        'prodi' => 'Teknik Informatika'
+    ]);
+});
+Route::get('/akademik/statistik', function () {
+    return view('akademik.statistik');
+});
